@@ -7,6 +7,7 @@ const { CheckboxsPage } = require("./CheckboxesPage");
 const { SingleSelectPage } = require("./SingleSelectPage");
 const { MultipleSelectPage } = require("./MultipleSelectPage");
 const { TextAreaPage } = require("./TextAreaPage");
+const { MultipleTextareas } = require("./MultipleTextareas");
 
 class POManager {
   constructor(page) {
@@ -20,6 +21,11 @@ class POManager {
     this.singleSelectPage = new SingleSelectPage(page);
     this.multipleSelectPage = new MultipleSelectPage(page);
     this.textAreaPage = new TextAreaPage(page);
+    this.multipleTextareas = new MultipleTextareas(page);
+  }
+
+  getMultipleTextareas() {
+    return this.multipleTextareas;
   }
 
   getTextAreaPage() {
