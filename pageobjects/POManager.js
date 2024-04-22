@@ -12,6 +12,7 @@ const { AlertBoxPage } = require("./AlertBoxPage");
 const { ConfirmationBoxPage } = require("./ConfirmationBoxPage");
 const { PromptBoxPage } = require("./PromptBoxPage");
 const { DragAndDropPage } = require("./DragAndDropPage");
+const { DragAndDropImages } = require("./DragAndDropImages");
 
 class POManager {
   constructor(page) {
@@ -30,6 +31,11 @@ class POManager {
     this.confirmationBoxPage = new ConfirmationBoxPage(page);
     this.promptBoxPage = new PromptBoxPage(page);
     this.dragAndDropPage = new DragAndDropPage(page);
+    this.dragAndDropImages = new DragAndDropImages(page);
+  }
+
+  getDragAndDropImages() {
+    return this.dragAndDropImages;
   }
 
   getDragAndDropPage() {
