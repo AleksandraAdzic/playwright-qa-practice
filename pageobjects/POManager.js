@@ -11,6 +11,7 @@ const { MultipleTextareas } = require("./MultipleTextareas");
 const { AlertBoxPage } = require("./AlertBoxPage");
 const { ConfirmationBoxPage } = require("./ConfirmationBoxPage");
 const { PromptBoxPage } = require("./PromptBoxPage");
+const { DragAndDropPage } = require("./DragAndDropPage");
 
 class POManager {
   constructor(page) {
@@ -28,9 +29,14 @@ class POManager {
     this.alertBoxPage = new AlertBoxPage(page);
     this.confirmationBoxPage = new ConfirmationBoxPage(page);
     this.promptBoxPage = new PromptBoxPage(page);
+    this.dragAndDropPage = new DragAndDropPage(page);
   }
 
-  getPromptBoxPage(){
+  getDragAndDropPage() {
+    return this.dragAndDropPage;
+  }
+
+  getPromptBoxPage() {
     return this.promptBoxPage;
   }
 
