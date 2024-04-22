@@ -9,6 +9,7 @@ const { MultipleSelectPage } = require("./MultipleSelectPage");
 const { TextAreaPage } = require("./TextAreaPage");
 const { MultipleTextareas } = require("./MultipleTextareas");
 const { AlertBoxPage } = require("./AlertBoxPage");
+const { ConfirmationBoxPage } = require("./ConfirmationBoxPage");
 
 class POManager {
   constructor(page) {
@@ -24,6 +25,11 @@ class POManager {
     this.textAreaPage = new TextAreaPage(page);
     this.multipleTextareas = new MultipleTextareas(page);
     this.alertBoxPage = new AlertBoxPage(page);
+    this.confirmationBoxPage = new ConfirmationBoxPage(page);
+  }
+
+  getConfirmationBoxPage() {
+    return this.confirmationBoxPage;
   }
 
   getAlertBoxPage() {
