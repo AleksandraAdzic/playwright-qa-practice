@@ -15,7 +15,7 @@ test("Drag and Drop Images - one drag and drop", async ({ page }) => {
   await expect(dragAndDropImages.firstText).toHaveText("Dropped!");
 });
 
-test.only("Drag and Drop Images - two drag and drop", async ({ page }) => {
+test("Drag and Drop Images - two drag and drop", async ({ page }) => {
   const poManager = new POManager(page);
   const dragAndDropImages = poManager.getDragAndDropImages();
 
